@@ -7,20 +7,21 @@
                 app
         >
             <v-list dense>
-                <v-list-tile @click="">
+                <v-list-tile v-on:click="navigateToBooks">
                     <v-list-tile-action>
-                        <v-icon>dashboard</v-icon>
+                        <v-icon>book</v-icon>
                     </v-list-tile-action>
                     <v-list-tile-content>
-                        <v-list-tile-title>Dashboard</v-list-tile-title>
+                        <v-list-tile-title>Books</v-list-tile-title>
                     </v-list-tile-content>
                 </v-list-tile>
-                <v-list-tile v-on:click="">
+
+                <v-list-tile v-on:click="navigateToStudents">
                     <v-list-tile-action>
-                        <v-icon>settings</v-icon>
+                        <v-icon>supervised_user_circle</v-icon>
                     </v-list-tile-action>
                     <v-list-tile-content>
-                        <v-list-tile-title>Settings</v-list-tile-title>
+                        <v-list-tile-title>Students</v-list-tile-title>
                     </v-list-tile-content>
                 </v-list-tile>
             </v-list>
@@ -40,7 +41,19 @@
 
         data: () => ({
             drawer: false
-        })
+        }),
+
+        methods: {
+            navigateToBooks() {
+                this.drawer = false
+                this.$router.push({ name: 'books'})
+            },
+
+            navigateToStudents() {
+                this.drawer = false
+                this.$router.push({ name: 'students'})
+            }
+        }
     }
 </script>
 

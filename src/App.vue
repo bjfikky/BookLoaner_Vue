@@ -13,8 +13,8 @@
             </v-container>
         </v-content>
 
-        <v-footer app fixed>
-            <span>&copy; 2017</span>
+        <v-footer app fixed class="footer">
+            <span>&copy; 2018 - Mary Pate | <small>Developed by Benjamin Orimoloye</small></span>
         </v-footer>
     </v-app>
 </template>
@@ -28,3 +28,9 @@
         }
     }
 </script>
+
+<style scoped>
+    .footer{
+        padding: 20px;
+    }
+</style>
