@@ -6,7 +6,7 @@
 
                 <v-card class="book" v-for="(book, index) in books" v-bind:key="index">
                     <v-container class="book-container">
-                        <h3>{{ book.title }}</h3>
+                        <h2>{{ book.title }}</h2>
                         <small>AUTHOR: <em>{{ book.author }}</em></small>
                         <br>
                         <small>EDITION: <em>{{ book.edition }}</em></small>
